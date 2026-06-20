@@ -30,10 +30,12 @@ app.use(
 app.use("/api/v1/user", userRouter);
 
 const PORT = process.env.PORT;
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.use(express.static(path.join(_dirname, "frontend", "netflix", "dist")));
 
 app.use((req, res) => {
-  res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+  res.sendFile(
+    path.resolve(_dirname, "frontend", "netflix", "dist", "index.html"),
+  );
 });
 
 app.listen(PORT, () => {
