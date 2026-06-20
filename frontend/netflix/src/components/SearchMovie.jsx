@@ -31,7 +31,7 @@ const SearchBar = () => {
         `https://api.themoviedb.org/3/search/movie?query=${searchMovie}&include_adult=false&language=en-US&page=1`,
         options,
       );
-      console.log(res.data.results);
+
       const movies = res?.data?.results;
 
       dispatch(setSearchMoviesDetails({ searchMovie, movies }));

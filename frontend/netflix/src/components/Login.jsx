@@ -53,7 +53,7 @@ const Login = () => {
 
       try {
         const res = await axios.post(
-          "http://localhost:8080/api/v1/user/register",
+          "https://mern-netflix-clone-6hts.onrender.com/api/v1/user/register",
 
           { fullName, email, password },
           {
