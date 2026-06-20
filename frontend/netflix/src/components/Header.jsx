@@ -16,7 +16,7 @@ const Header = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/user/logout");
+      const res = await axios.get("https://mern-netflix-clone-6hts.onrender.com/api/v1/user/logout");
 
       toast.success(res.data.message);
       dispatch(setUser(null));
@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   return (
-   <div className="fixed top-0 left-0 z-[9999] flex w-full items-center justify-between bg-gradient-to-b from-black/80 to-transparent px-8 py-3">
+    <div className="fixed top-0 left-0 z-[9999] flex w-full items-center justify-between bg-gradient-to-b from-black/80 to-transparent px-8 py-3">
       <img
         className="w-40 md:w-44 object-contain"
         src="https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
